@@ -1,5 +1,5 @@
 // functions for label, input and break tag
-
+// forms
 function label_create(tagName, attrName, attrVal, content){
     let ele = document.createElement(tagName);
     ele.setAttribute(attrName, attrVal);
@@ -14,11 +14,11 @@ function input_tag(inputTag, attrName, attrVal, attrName1, attrVal1){
     return input_ele;
 }
 
-function button_create(inputTag, attrName, attrVal, attrName1, attrVal1){
+function button_create(inputTag, attrName, attrVal, attrName1, attrVal1, contents){
     let input_ele = document.createElement(inputTag);
     input_ele.setAttribute(attrName, attrVal);
     input_ele.setAttribute(attrName1, attrVal1);
-    input_ele.innerHTML = "Click Me";
+    input_ele.innerHTML = contents;
     return input_ele;
 }
 
@@ -30,7 +30,7 @@ function break_line(){
 function foo(){
     var res = document.getElementsByTagName("input");
     for (var i = 0; i < res.length; i++) {
-        console.log(res[i].value);
+        console.log(res[i].id, ":", res[i].value);
     }
 }
 
@@ -75,3 +75,4 @@ form.append(
 );
 
 document.body.appendChild(form);
+document.getElementsByClassName
